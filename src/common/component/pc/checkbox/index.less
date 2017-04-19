@@ -1,0 +1,25 @@
+@import "../theme";
+.root{
+  display:inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  //line-height:0;
+
+
+  .disabled{
+    fill:@textColorDisabled;
+  }
+
+  .hidden{
+    transform: scale(0,0);
+    position:absolute;
+    left:0;
+    top:0;
+    .animate(transform);
+
+    &.visible{
+      transform: scale(1,1);
+    }
+  }
+}
